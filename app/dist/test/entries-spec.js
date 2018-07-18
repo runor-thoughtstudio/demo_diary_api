@@ -16,6 +16,10 @@ var _requests = require('../lib/requests');
 
 var _requests2 = _interopRequireDefault(_requests);
 
+var _app = require('../app');
+
+var _app2 = _interopRequireDefault(_app);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();
@@ -24,6 +28,9 @@ var expect = _chai2.default.expect;
 var request = new _requests2.default();
 
 describe('Test Enrties Routes', function () {
+	after(function () {
+		_app2.default.close();
+	});
 	describe('allEntries()', function () {
 		it('should show all entries in the app', function (done) {
 			before(function () {

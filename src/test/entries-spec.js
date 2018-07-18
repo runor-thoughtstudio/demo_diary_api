@@ -38,4 +38,20 @@ describe('Test Enrties Routes', () => {
 			});
 		}).timeout(10000);
 	});
+
+	describe('showEntry()', () => {
+		it('should show an entry', (done) => {
+			const url = `${process.env.root_url}/${process.env.version_url}/entries`;
+			const formData = {
+				title: 'Title',
+				description: 'Cool',
+			};
+			request.post(url, formData, (error, res, body) => {
+				const jsonObject = JSON.parse(body);
+				expect(res.statusCode).to.be.equal(201);
+				expect(jsonObject).to.be.a('object');
+				done();
+			});
+		}).timeout(10000);
+	});
 });

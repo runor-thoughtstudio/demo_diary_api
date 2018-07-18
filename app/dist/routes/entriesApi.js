@@ -43,5 +43,18 @@ entriesRouter.get('/entries/:id', function (req, res) {
 	}
 });
 
+entriesRouter.post('/entries', function (req, res) {
+	var datastructure = req.app.get('appData');
+	if (req.body.title === ' ' || req.body.description === ' ') {
+		res.status(422).json({ message: 'Please fill in all the fields properly!' });
+	}
+	if (req.body.title && req.body.description) {
+		datastructure.entries.push(req.body);
+		res.status(201).json({ message: 'The entry has been created' });
+	} else {
+		res.status(400).json({ message: 'Invalid request' });
+	}
+});
+
 exports.default = entriesRouter;
 //# sourceMappingURL=entriesApi.js.map

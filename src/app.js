@@ -21,6 +21,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(app.get('appVersion'), entriesRouter);
-app.listen(app.get('port'), () => {
+const server = app.listen(app.get('port'), () => {
 	console.log('Application started. Listening :)');
 });
+export default server;

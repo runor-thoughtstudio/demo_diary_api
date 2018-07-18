@@ -4,7 +4,13 @@
 		"description": "This application is used to power the front-end of mydiary application",
 		"main": "app/dist/app.js",
 		"scripts": {
-				"test": "grunt MochaTest"
+			"test": "grunt mochaTest",
+			"lint": "./node_modules/.bin/eslint src/test/users-spec.js --fix",
+			"start": "nodemon app/dist/app.js",
+			"watch": "grunt watch",
+			"predev": "grunt",
+			"dev": "grunt & node app/dist/app.js",
+			"build": "node app/dist/app.js"
 		},
 		"repository": {
 				"type": "git",

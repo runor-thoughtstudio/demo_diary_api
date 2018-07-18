@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import entriesRouter from './routes/entriesApi';
 
 dotenv.config();
 const app = express();
@@ -15,9 +16,11 @@ const dataStructure = {
 };
 app.set('port', process.env.PORT || 3000);
 app.set('appData', dataStructure);
+app.set('appVersion', '/api/v1');
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(app.get('appVersion'), entriesRouter);
 app.listen(app.get('port'), () => {
 	console.log('Application started. Listening :)');
 });

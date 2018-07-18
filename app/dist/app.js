@@ -16,6 +16,10 @@ var _dotenv = require('dotenv');
 
 var _dotenv2 = _interopRequireDefault(_dotenv);
 
+var _entriesApi = require('./routes/entriesApi');
+
+var _entriesApi2 = _interopRequireDefault(_entriesApi);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();
@@ -30,9 +34,11 @@ var dataStructure = {
 };
 app.set('port', process.env.PORT || 3000);
 app.set('appData', dataStructure);
+app.set('appVersion', '/api/v1');
 app.use((0, _cors2.default)());
 app.use(_bodyParser2.default.urlencoded({ extended: true }));
 app.use(_bodyParser2.default.json());
+app.use(app.get('appVersion'), _entriesApi2.default);
 app.listen(app.get('port'), function () {
 	console.log('Application started. Listening :)');
 });

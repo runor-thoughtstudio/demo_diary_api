@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/routes/userApi.js"],"names":["UserApi","module","exports"],"mappings":";;;;IAAMA,O;;;;AAINC,OAAOC,OAAP,GAAiBF,OAAjB","file":"userApi.js","sourcesContent":["class UserApi {\n\n}\n\nmodule.exports = UserApi;\n"]}

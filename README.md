@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=requirements-setup)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)
+
 # MyDiary Application Api
 
 This api is going to be used to power the MyDiary application front-end

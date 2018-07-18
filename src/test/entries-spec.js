@@ -41,9 +41,9 @@ describe('Test Enrties Routes', () => {
 
 	describe('showEntry()', () => {
 		it('should show an entry', (done) => {
-			const url = `${process.env.root_url}/${process.env.version_url}/entries/0`;
+			const url = `${process.env.root_url}/${process.env.version_url}/entries`;
 			const formData = {
-				title: 'Second',
+				title: 'Title',
 				description: 'Cool',
 			};
 			request.post(url, formData, (error, res, body) => {

@@ -60,9 +60,9 @@ describe('Test Enrties Routes', function () {
 
 	describe('showEntry()', function () {
 		it('should show an entry', function (done) {
-			var url = process.env.root_url + '/' + process.env.version_url + '/entries/0';
+			var url = process.env.root_url + '/' + process.env.version_url + '/entries';
 			var formData = {
-				title: 'Second',
+				title: 'Title',
 				description: 'Cool'
 			};
 			request.post(url, formData, function (error, res, body) {

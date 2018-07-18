@@ -2,16 +2,16 @@ import chai from 'chai';
 import nock from 'nock';
 import dotenv from 'dotenv';
 import Request from '../lib/requests';
-import server from '../app';
+// import server from '../app';
 
 dotenv.config();
 const { expect } = chai;
 const request = new Request();
 
-describe('Test Enrties Routes', () => {
-	after(() => {
-		server.close();
-	});
+describe('Test Entries Routes', () => {
+	// after(() => {
+	// 	server.close();
+	// });
 	describe('allEntries()', () => {
 		it('should show all entries in the app', (done) => {
 			before(() => {

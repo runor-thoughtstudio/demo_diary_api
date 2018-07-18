@@ -29,9 +29,6 @@ describe('Test Enrties Routes', () => {
 
 	describe('showEntry()', () => {
 		it('should show an entry', (done) => {
-			before(() => {
-				nock(`${process.env.root_url}/${process.version_url}`).get('/entries/0').reply(200, { title: 'one', description: 'cool' });
-			});
 			const url = `${process.env.root_url}/${process.env.version_url}/entries/0`;
 			request.get(url, (error, res, body) => {
 				const jsonObject = JSON.parse(body);

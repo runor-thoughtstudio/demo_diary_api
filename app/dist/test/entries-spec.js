@@ -57,5 +57,21 @@ describe('Test Enrties Routes', function () {
 			});
 		}).timeout(10000);
 	});
+
+	describe('showEntry()', function () {
+		it('should show an entry', function (done) {
+			var url = process.env.root_url + '/' + process.env.version_url + '/entries/0';
+			var formData = {
+				title: 'Second',
+				description: 'Cool'
+			};
+			request.post(url, formData, function (error, res, body) {
+				var jsonObject = JSON.parse(body);
+				expect(res.statusCode).to.be.equal(201);
+				expect(jsonObject).to.be.a('object');
+				done();
+			});
+		}).timeout(10000);
+	});
 });
 //# sourceMappingURL=entries-spec.js.map

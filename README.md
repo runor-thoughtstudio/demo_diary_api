@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=requirements-setup)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)
+[![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=express-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)
 
 # MyDiary Application Api
 

@@ -27,7 +27,7 @@ describe('Test Entries Routes', function () {
 	describe('allEntries()', function () {
 		it('should show all entries in the app', function (done) {
 			before(function () {
-				(0, _nock2.default)(process.env.root_url + '/' + process.version_url).get('/entries').reply(200, [{ title: 'one', description: 'cool' }]);
+				(0, _nock2.default)(process.env.root_url + '/' + process.version_url).get('/entries').reply(200, [{ title: 'one', description: 'cools' }]);
 			});
 			var url = process.env.root_url + '/' + process.env.version_url + '/entries';
 			request.get(url, function (error, res, body) {

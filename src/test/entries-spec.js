@@ -11,7 +11,7 @@ describe('Test Entries Routes', () => {
 	describe('allEntries()', () => {
 		it('should show all entries in the app', (done) => {
 			before(() => {
-				nock(`${process.env.root_url}/${process.version_url}`).get('/entries').reply(200, [{ title: 'one', description: 'cool' }]);
+				nock(`${process.env.root_url}/${process.version_url}`).get('/entries').reply(200, [{ title: 'one', description: 'cools' }]);
 			});
 			const url = `${process.env.root_url}/${process.env.version_url}/entries`;
 			request.get(url, (error, res, body) => {

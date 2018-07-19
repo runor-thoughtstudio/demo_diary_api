@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 		      require: 'babel-register'
 		    },
 		    src: ['app/dist/test/**/*.js']
+		    // src: ['app/dist/test/users-spec.js', 'app/dist/test/entries-spec.js']
 		  }
 	   },
        watch: {

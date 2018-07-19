@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=all-entries-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)   [![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=show-entry-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)   [![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=create-entry-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api) [![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=update-entry-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)   [![Coverage Status](https://coveralls.io/repos/github/runor-thoughtstudio/demo_diary_api/badge.svg?branch=develop)](https://coveralls.io/github/runor-thoughtstudio/demo_diary_api?branch=develop)
+[![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=all-entries-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)   [![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=show-entry-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)   [![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=create-entry-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api) [![Build Status](https://travis-ci.org/runor-thoughtstudio/demo_diary_api.svg?branch=update-entry-feature)](https://travis-ci.org/runor-thoughtstudio/demo_diary_api)   [![Coverage Status](https://coveralls.io/repos/github/runor-thoughtstudio/demo_diary_api/badge.svg?branch=multiple-features)](https://coveralls.io/github/runor-thoughtstudio/demo_diary_api?branch=multiple-features)
 
 # MyDiary Application Api
 
@@ -13,4 +13,5 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 What things you will need to setup
-Babel, etc.
+Packages that are required:
+Babel, airbnb, mocha, eslint, grunt.

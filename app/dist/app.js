@@ -1,5 +1,10 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.mainServer = exports.mainApp = undefined;
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -44,14 +49,21 @@ app.use(_bodyParser2.default.urlencoded({ extended: true }));
 app.use(_bodyParser2.default.json());
 app.use(app.get('appVersion'), _entriesApi2.default);
 app.use(app.get('appVersion'), _usersApi2.default);
-app.listen(app.get('port'), function () {
+var server = app.listen(app.get('port'), function () {
 	console.log('Application started. Listening :)');
 });
 // export default server;
-// export server;
+// // export server;
 // export app;
-// module.exoorts = {
+// export {
+// 	server,
+// 	app,
+// };
+// module.exports = {
 // 	app,
 // 	server,
 // };
+
+var mainApp = exports.mainApp = app;
+var mainServer = exports.mainServer = server;
 //# sourceMappingURL=app.js.map

@@ -71,5 +71,15 @@ entriesRouter.put('/entries/:id', function (req, res) {
 	}
 });
 
+entriesRouter.delete('/entries/:id', function (req, res) {
+	var datastructure = req.app.get('appData');
+	if (datastructure.entries === undefined || datastructure.entries[req.params.id] === undefined) {
+		res.status(404).json({ error: 'This entry does not exist' });
+	} else {
+		datastructure.entries.splice(req.params.id, 1);
+		res.status(204).json({ message: 'Entry Deleted' });
+	}
+});
+
 exports.default = entriesRouter;
 //# sourceMappingURL=entriesApi.js.map

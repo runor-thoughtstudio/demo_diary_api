@@ -18,17 +18,12 @@ var _requests2 = _interopRequireDefault(_requests);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import server from '../app';
-
 _dotenv2.default.config();
 var expect = _chai2.default.expect;
 
 var request = new _requests2.default();
 
 describe('Test Entries Routes', function () {
-	// after(() => {
-	// 	server.close();
-	// });
 	describe('allEntries()', function () {
 		it('should show all entries in the app', function (done) {
 			before(function () {
@@ -83,6 +78,17 @@ describe('Test Entries Routes', function () {
 				var jsonObject = JSON.parse(body);
 				expect(res.statusCode).to.be.equal(200);
 				expect(jsonObject).to.be.a('object');
+				done();
+			});
+		}).timeout(10000);
+	});
+
+	describe('deleteEntry()', function () {
+		it('should delete an entry', function (done) {
+			var url = process.env.root_url + '/' + process.env.version_url + '/entries/0';
+			request.delete(url, function (error, res, body) {
+				expect(res.statusCode).to.be.equal(204);
+				expect(body).to.be.equal('');
 				done();
 			});
 		}).timeout(10000);

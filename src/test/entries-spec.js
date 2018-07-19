@@ -2,16 +2,12 @@ import chai from 'chai';
 import nock from 'nock';
 import dotenv from 'dotenv';
 import Request from '../lib/requests';
-// import server from '../app';
 
 dotenv.config();
 const { expect } = chai;
 const request = new Request();
 
 describe('Test Entries Routes', () => {
-	// after(() => {
-	// 	server.close();
-	// });
 	describe('allEntries()', () => {
 		it('should show all entries in the app', (done) => {
 			before(() => {
@@ -66,6 +62,17 @@ describe('Test Entries Routes', () => {
 				const jsonObject = JSON.parse(body);
 				expect(res.statusCode).to.be.equal(200);
 				expect(jsonObject).to.be.a('object');
+				done();
+			});
+		}).timeout(10000);
+	});
+
+	describe('deleteEntry()', () => {
+		it('should delete an entry', (done) => {
+			const url = `${process.env.root_url}/${process.env.version_url}/entries/0`;
+			request.delete(url, (error, res, body) => {
+				expect(res.statusCode).to.be.equal(204);
+				expect(body).to.be.equal('');
 				done();
 			});
 		}).timeout(10000);

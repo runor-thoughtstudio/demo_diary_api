@@ -23,13 +23,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(app.get('appVersion'), entriesRouter);
 app.use(app.get('appVersion'), usersRouter);
-app.listen(app.get('port'), () => {
+const server = app.listen(app.get('port'), () => {
 	console.log('Application started. Listening :)');
 });
 // export default server;
-// export server;
+// // export server;
 // export app;
-// module.exoorts = {
+// export {
+// 	server,
+// 	app,
+// };
+// module.exports = {
 // 	app,
 // 	server,
 // };
+
+export const mainApp = app;
+export const mainServer = server;
